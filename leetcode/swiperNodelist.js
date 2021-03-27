@@ -26,3 +26,19 @@ var swapPairs = function(head) {
     
     return pointer.next
 };
+/**
+ * @param {number[]} nums
+ * @param {number} val
+ * @return {number}
+ */
+var removeElement = function(nums, val) {
+    let l = 0
+    for (let index = 0; index < nums.length; index++) {
+        const element = nums[index];
+        if (element != val) {
+            nums[l] = nums[index] 
+            l++
+        }
+    }
+    return l
+};
