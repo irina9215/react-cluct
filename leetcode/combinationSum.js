@@ -22,7 +22,7 @@ candidates 中的数字可以无限制重复被选取。
  */
 var combinationSum = function(candidates, target) {
     let result = [];
-    let trackBack = (target, combination, index) => {
+    let trackBack = (target, combination, index) => { // index 已存入result数组内的index
         // 终止条件,与传入参数有关
         if (index === candidates.length) {
             return
