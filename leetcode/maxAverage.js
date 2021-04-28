@@ -23,8 +23,8 @@ var maxAverageImprove = function (nums, k) {
     let currentAvg = temp.reduce((prv, cur) => prv + cur, 0);
     let _maxAverage = currentAvg;
 
-    for (let i = k+1; i < nums.length; i++) {
-        currentAvg = currentAvg - nums[i-1] + nums[i+k]
+    for (let i = 0; i < nums.length - k; i++) {
+        currentAvg = currentAvg - nums[i] + nums[i+k]
         if (currentAvg >= _maxAverage) {
             _maxAverage = currentAvg
         }
